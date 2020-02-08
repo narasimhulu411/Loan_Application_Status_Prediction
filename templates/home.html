@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loan_Status Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="loan.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan_Status Prediction</h1>
+      <style media="screen">
+        h1{
+            color:white;
+            text-align:center;
+            background:green;
+            background-size:auto;
+          }
+    body{
+      background: cyan;
+    }
+      </style>
+
+      <form class="form-horizontal" action="/predict" method="post">
+        <div class="form-group">
+
+            <div class="col-xs-4">
+              <label for="Gender" >Job</label>
+              <select id="Gender" name="Gender" class="form-control">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+
+                </select>
+                </div>
+                <div class="col-xs-4">
+                  <label for="Marital" >Married</label>
+                  <select id="Marital" name="Marital" class="form-control">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    </select>
+                    </div>
+                <div class="col-xs-4">
+                    <label for="Dependents">Dependents</label>
+                    <input type="text" name="Dependents" id="Dependents" class="form-control" placeholder="Enter # of Dependents" required><small> Enter between(0-3)</small>
+                </div>
+                    <div class="col-xs-4">
+                      <label for="Education" >Education</label>
+                      <select id="Education" name="Education" class="form-control">
+                            <option value="0">Not Graduate</option>
+                            <option value="1">Graduate</option>
+
+                        </select>
+                        </div>
+                        <div class="col-xs-4">
+                          <label for="Self_Employed" >Self_Employed</label>
+                          <select id="Self_Employed" name="Self_Employed" class="form-control">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+
+                            </select>
+                            </div>
+
+                            <div class="col-xs-4">
+                              <label for="Loan_Amount_Term">Loan_Amount_Term</label>
+                              <input type="text" name="Loan_Amount_Term" id="Loan_Amount_Term" class="form-control" placeholder="Enter Loan Amount Term" required><small> Enter Loan_Amount_Term in months(from 12 to 360)</small>
+                              </div>
+                              <div class="col-xs-4">
+                                <label for="Credit_History">Credit_History</label>
+                                <input type="text" name="Credit_History" id="Credit_History" class="form-control" placeholder="Enter Credit_History" required><small> Enter Credit_History(0 or 1)</small>
+                                </div>
+
+
+                                <div class="col-xs-4">
+                                  <label for="Property_Area" >Property_Area</label>
+                                  <select id="Property_Area" name="Property_Area" class="form-control">
+                                        <option value="1">Urban</option>
+                                        <option value="2">Rural</option>
+                                        <option value="3">Semiurban</option>
+                                    </select>
+                                    </div>
+
+
+                                    <div class="col-xs-4">
+                                      <label for="LoanAmount">Loan Amount</label>
+                                      <input type="text" name="LoanAmount" id="LoanAmount" class="form-control" placeholder="Enter Loan Amount" required><small> Enter Loan Amount in thousands</small>
+                                      </div>
+
+                                    <div class="col-xs-4">
+                                      <label for="Applicant_Income">Applicant Income</label>
+                                      <input type="text" name="Applicant_Income" id="Applicant_Income" class="form-control" placeholder="Enter Applicant's Income" required><small> Enter Applicant's Income</small>
+                                      </div>
+
+                                    <div class="col-xs-4">
+                                      <label for="CoApplicant_Income">Co Applicant Income</label>
+                                      <input type="text" name="CoApplicant_Income" id="CoApplicant_Income" class="form-control" placeholder="Enter CoApplicant's Income" required><small> Enter CoApplicant's Income</small>
+                                      </div><br><br>
+
+
+
+
+
+                            </div>
+
+                            <div class="col-xs-12">
+                              <button type="submit" class="btn btn-primary">Predict</button>
+                              </div>
+            </form>
+
+
+              </div>
+
+
+
+  </body>
+</html>
